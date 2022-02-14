@@ -1,14 +1,20 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../../components/Layout';
+import Hero from '../../components/Hero/Hero';
 
-function DropboxPage({ data }) {
+function DropboxPage(props) {
+  console.log('props', props);
+  const { data } = props;
   const { nodeCustomPage } = data;
-  const { title, body } = nodeCustomPage;
+  const { title, body, relationships } = nodeCustomPage;
+  const { field_blocks } = relationships;
+  const hero = field_blocks[0];
   return (
-    <Layout>
+    <Layout dropbox>
       <h1>{title}</h1>
       <div dangerouslySetInnerHTML={{ __html: body.processed }} />
+      <Hero {...hero} />
     </Layout>
   );
 }

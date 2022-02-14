@@ -1,0 +1,68 @@
+@import url(//db.onlinewebfonts.com/c/91d3afe918937141b6ae8e43b1005bc8?family=Sharp+Grotesk+Book+25);
+@font-face {font-family: "Sharp Grotesk Book 25"; src: url("//db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.eot"); src: url("//db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.woff") format("woff"), url("//db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.svg#Sharp Grotesk Book 25") format("svg"); }
+@font-face {font-family: "Atlas Grotesk"; src: url("../../../static/AtlasGrotesk-Regular.otf"); }
+
+#hero {
+    display: flex;
+    .pane {
+        &-text{
+            max-width: 480px;
+            font-family: 'Atlas Grotesk', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h1, .body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 48px;
+                font-family: 'Sharp Grotesk Book 25', sans-serif;
+            }
+            button {
+                color: #fff;
+                background: #0061fe;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                margin: 10px auto;
+                border: 0;
+                width: calc(100% - 30px);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .body {
+                padding: 30px 40px;
+                background: rgb(237, 233, 227);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+                
+            }
+        } 
+        &-graphics {
+            display: flex;
+            .video, .image {
+                width: 50%;
+
+            }
+            .video {
+                background: rgb(176, 81, 35);
+                video {
+                    width: 100%;
+                }
+            }
+            .image {
+                background-image: url('../../images/img.jpeg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+        }
+    }
+}
